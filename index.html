@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Julius+Sans+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="estilos.css">
+    <title>Megara Beauty</title>
+</head>
+<body>
+    <header>
+        <div>
+            <img src="imagenes/logom.jpg" alt="Logo MegaraBeauty">
+        </div>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()"><i class="fa fa-bars"></i></a>
+        <nav id="navegador">
+            <ul class="opciones">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="productos.html">Productos y Servicios</a></li>
+                <li><a href="QuienesSomos.html">Quienes Somos</a></li>
+            </ul>
+    </nav>
+    </header>
+<section>
+    <article class="principal">
+        <div>
+            <img src="imagenes/megarabeautyy.png" alt="MegaraBeauty">
+            <h1>Make-Up Brand by Megara</h1>
+        </div>
+    </article> 
+    <article class="primario">
+        <div class="contenedor"> 
+            <figure>
+         <img src="imagenes/maquillajevioleta.jpg" alt="Maquillaje">
+
+          <div class="capa">
+            <h3>Productos y Servicios</h3>
+            <p>¡Ingresá y mirá todos nuestros nuevos productos y servicios!</p>
+        </div>
+    </figure>
+</div>
+</article> 
+<article class="secundario">
+<div class="contenedor2"> 
+            <figure>
+            <img src="imagenes/brochas.jpeg" alt="Brochas de maquillaje">
+            <div class="capa">
+            <h4>Productos</h4>
+            <a href="productos.html">
+            <button>Nuestros productos</button>
+            </a>
+    </div>
+</figure>
+</div>
+<div class="contenedor2"> 
+    <figure>
+                <img src="imagenes/sombras.jpeg" alt="Sombras de maquillaje">
+                <div class="capa">
+                <h4>Nosotros</h4>
+                <a href="QuienesSomos.html">
+                    <button>Sobre Nosotros</button>
+            </a>
+        </div>
+    </figure>
+    </div>
+    <div class="contenedor2"> 
+        <figure>
+                <a href="QuienesSomos.html">
+                    <img src="imagenes/labial.jpg" alt="Labiales">
+                    <div class="capa">
+                    <h4>Contacto</h4>
+                    <a href="QuienesSomos.html">
+                        <button>Contactanos</button>
+                </a>
+            </div>
+        </figure>
+        </div>
+   
+</article>
+</section>
+<div>
+    <h2>Nuevos Ingresos</h2>
+</div>
+
+ <!-- Container -->
+ <div class="container">
+
+    <!-- Full-width images with number and caption text -->
+    <div class="elementoCarousel fade">
+        <div class="numbertext">1 / 5</div>
+        <img src="imagenes/skin1.jpg" style="width: 100%">
+        <div class="text">Serum</div>
+    </div>
+
+    <div class="elementoCarousel fade">
+        <div class="numbertext">2 / 5</div>
+        <img src="imagenes/skin2.jpg" style="width:100%">
+        <div class="text">Spray Fijador</div>
+    </div>
+
+    <div class="elementoCarousel fade">
+        <div class="numbertext">3 / 5</div>
+        <img src="imagenes/skin4.jpg" style="width:100%">
+        <div class="text">Mascarillas</div>
+    </div>
+
+    <div class="elementoCarousel fade">
+        <div class="numbertext">4 / 5</div>
+        <img src="imagenes/skin3.jpg" style="width:100%">
+        <div class="text">Parches Hidratantes</div>
+    </div>
+    <div class="elementoCarousel fade">
+        <div class="numbertext">5/ 5</div>
+        <img src="imagenes/skin5.jpg" style="width:100%">
+        <div class="text">Desmaquillante</div>
+    </div>
+
+
+    <!-- Next and previous buttons -->
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+</div>
+<br>
+
+<!-- The dots/circles -->
+<div style="text-align:center">
+    <span class="dot" onclick="slideActual(1)"></span>
+    <span class="dot" onclick="slideActual(2)"></span>
+    <span class="dot" onclick="slideActual(3)"></span>
+    <span class="dot" onclick="slideActual(4)"></span>
+    <span class="dot" onclick="slideActual(5)"></span>
+</div>
+
+<br>
+
+<div class="container">
+    <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button> 
+</div>
+
+
+<script>
+    // Definir un índice y llamar a la función que muestra un slide
+    let indiceSlide = 1;
+    mostrarSlides(indiceSlide);
+
+    // Mover el slide a través de los controles previo y próximo (1, -1)
+    function plusSlides(numero) {
+        mostrarSlides(indiceSlide += numero);
+    }
+
+    // Mover el slide a través de los indicadores
+    function slideActual(numero) {
+        mostrarSlides(indiceSlide = numero);
+    }
+
+    function mostrarSlides(numero) {
+        // Obtener los elementos para operar con ellos
+        let slides = document.getElementsByClassName("elementoCarousel");
+        let indicadores = document.getElementsByClassName("dot");
+
+        // Validar "numero"
+        if (numero > slides.length) { indiceSlide = 1 }
+        if (numero < 1) { indiceSlide = slides.length }
+
+        // Iterar y ocultar los slides y el estilo de los indicadores
+        for (let i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        for (i = 0; i < indicadores.length; i++) {
+            indicadores[i].className = indicadores[i].className.replace(" active", "");
+        }
+
+        // Mostrar el slide indicado con display block y agregarle el estilo al punto indicado
+        slides[indiceSlide - 1].style.display = "block";
+        indicadores[indiceSlide - 1].className += " active";
+    } 
+
+    // SCROLL TO TOP:
+
+    let buttonTop = document.getElementById("myBtn");
+
+    // Al hacer scroll down 20px del top del documento, mostrar el boton
+    window.onscroll = function() { 
+        scrollFunction()
+    };
+
+    function scrollFunction() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        buttonTop.style.display = "block";
+    } else {
+        buttonTop.style.display = "none";
+    }
+    }
+
+    // Al hacer click, hacer scroll al top del documento
+    function topFunction() {
+        document.body.scrollTop = 0; // Safari
+        document.documentElement.scrollTop = 0; // Chrome, Firefox, IE and Opera
+    } 
+</script>
+<footer>
+    <div class="conteinerfooter">
+<p>&copy; Megara Beauty 2022. Autor: Guadalupe Alemany.</p>
+</div>
+</footer>
+</body>
+<script type="text/javascript">
+    function myFunction(){
+     let x = document.getElementById('navegador');
+        if (x.className !== 'responsive'){
+            x.className = 'responsive';
+        } else {
+            x.className = '';
+        }
+    }
+</script>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Julius+Sans+One&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="estilos.css">
+    <link rel="stylesheet" href="css/lightbox.min.css">
+    <title>MegaraBeautyGaleria</title>
+</head>
+<body>
+    <header>
+        <div>
+            <img src="imagenes/logom.jpg" alt="Logo MegaraBeauty">
+        </div>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()"><i class="fa fa-bars"></i></a>
+        <nav id="navegador">
+            <ul class="opciones">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="productos.html">Productos y Servicios</a></li>
+                <li><a href="QuienesSomos.html">Quienes Somos</a></li>
+            </ul>
+    </nav>
+    </header>
+    <section>
+        <article class="principal2">
+            <div>
+                <img src="imagenes/megarabeautyy.png" alt="MegaraBeauty">
+                <h1>Nuestros Productos y Servicios</h1>
+            </div>
+        </article> 
+    </section>
+    <section>
+    <article class="galeria">
+        <div>
+            <a class="example-image-link" href="imagenes/labialrojo.jpeg" data-lightbox="example-set" data-title="The next image in the set is preloaded as you're viewing."><img class="example-image" src="imagenes/labialrojogaleria.jpg" alt="LabialRojo" /></a>
+            <a class="example-image-link" href="imagenes/brochasvioleta.jpg" data-lightbox="example-set" data-title="Or press the right arrow on your keyboard."><img class="example-image" src="imagenes/brochasvioletagaleria.jpg" alt="Brochas de Maquillaje" /></a>
+            <a class="example-image-link" href="imagenes/lipstick.jpg" data-lightbox="example-set" data-title="Click the right half of the image to move forward."><img class="example-image" src="imagenes/lipstickgaleria.jpg" alt="Labial"/></a>
+            <a class="example-image-link" href="imagenes/purpleeye.jpg" data-lightbox="example-set" data-title="The next image in the set is preloaded as you're viewing."><img class="example-image" src="imagenes/purpleeyegaleria.jpg" alt="Sombras de Maquillaje" /></a>
+            <a class="example-image-link" href="imagenes/makeup1.jpg" data-lightbox="example-set" data-title="The next image in the set is preloaded as you're viewing."><img class="example-image" src="imagenes/makeup1galeria.jpg" alt="Maquillaje violeta" /></a>
+            <a class="example-image-link" href="imagenes/makeup2.jpg" data-lightbox="example-set" data-title="The next image in the set is preloaded as you're viewing."><img class="example-image" src="imagenes/makeup2galeria.jpg" alt="Maquillaje violeta" /></a>
+            <a class="example-image-link" href="imagenes/makeup3.jpg" data-lightbox="example-set" data-title="The next image in the set is preloaded as you're viewing."><img class="example-image" src="imagenes/makeup3galeria.jpg" alt="Maquillaje violeta" /></a>
+            <a class="example-image-link" href="imagenes/makeup4.jpg" data-lightbox="example-set" data-title="The next image in the set is preloaded as you're viewing."><img class="example-image" src="imagenes/makeup4galeria.jpg" alt="Maquillaje violeta" /></a>
+            
+    </article> 
+</section>
+<footer>
+    <div class="conteinerfooter">
+<p>&copy; Megara Beauty  2022. Autor: Guadalupe Alemany.</p>
+</div>
+</footer>
+<script src="js/lightbox-plus-jquery.min.js"></script>
+</body>
+<script type="text/javascript">
+    function myFunction(){
+     let x = document.getElementById('navegador');
+        if (x.className !== 'responsive'){
+            x.className = 'responsive';
+        } else {
+            x.className = '';
+        }
+    }
+</script>
+</html>
